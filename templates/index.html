@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Breast Cancer Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            
+            <label for="feature1">Mean Radius:</label>
+            <input type="number" step="any" name="feature1" required>
+
+            <label for="feature2">Mean Texture:</label>
+            <input type="number" step="any" name="feature2" required>
+
+            <label for="feature3">Mean Perimeter:</label>
+            <input type="number" step="any" name="feature3" required>
+
+            <label for="feature4">Mean Area:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature5">Mean Smoothness:</label>
+            <input type="number" step="any" name="feature5" required>
+
+            <label for="feature6">Mean Compactness:</label>
+            <input type="number" step="any" name="feature6" required>
+
+            <label for="feature7">Mean Concavity:</label>
+            <input type="number" step="any" name="feature7" required>
+
+            <label for="feature8">Mean Concave Points:</label>
+            <input type="number" step="any" name="feature8" required>
+
+            <label for="feature9">Mean Symmetry:</label>
+            <input type="number" step="any" name="feature9" required>
+
+            <label for="feature10">Mean Fractal Dimension:</label>
+            <input type="number" step="any" name="feature10" required>
+
+            <label for="feature11">Radius Error:</label>
+            <input type="number" step="any" name="feature11" required>
+
+            <label for="feature12">Texture Error:</label>
+            <input type="number" step="any" name="feature12" required>
+
+            <label for="feature13">Perimeter Error:</label>
+            <input type="number" step="any" name="feature13" required>
+
+            <label for="feature14">Area Error:</label>
+            <input type="number" step="any" name="feature14" required>
+
+            <label for="feature15">Smoothness Error:</label>
+            <input type="number" step="any" name="feature15" required>
+
+            <label for="feature16">Compactness Error:</label>
+            <input type="number" step="any" name="feature16" required>
+
+            <label for="feature17">Concavity Error:</label>
+            <input type="number" step="any" name="feature17" required>
+
+            <label for="feature18">Concave Points Error:</label>
+            <input type="number" step="any" name="feature18" required>
+
+            <label for="feature19">Symmetry Error:</label>
+            <input type="number" step="any" name="feature19" required>
+
+            <label for="feature20">Fractal Dimension Error:</label>
+            <input type="number" step="any" name="feature20" required>
+
+            <label for="feature21">Worst Radius:</label>
+            <input type="number" step="any" name="feature21" required>
+
+            <label for="feature22">Worst Texture:</label>
+            <input type="number" step="any" name="feature22" required>
+
+            <label for="feature23">Worst Perimeter:</label>
+            <input type="number" step="any" name="feature23" required>
+
+            <label for="feature24">Worst Area:</label>
+            <input type="number" step="any" name="feature24" required>
+
+            <label for="feature25">Worst Smoothness:</label>
+            <input type="number" step="any" name="feature25" required>
+
+            <label for="feature26">Worst Compactness:</label>
+            <input type="number" step="any" name="feature26" required>
+
+            <label for="feature27">Worst Concavity:</label>
+            <input type="number" step="any" name="feature27" required>
+
+            <label for="feature28">Worst Concave Points:</label>
+            <input type="number" step="any" name="feature28" required>
+
+            <label for="feature29">Worst Symmetry:</label>
+            <input type="number" step="any" name="feature29" required>
+
+            <label for="feature30">Worst Fractal Dimension:</label>
+            <input type="number" step="any" name="feature30" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
